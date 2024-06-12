@@ -9,13 +9,15 @@
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="container">
-    <h1>Foundations Sandbox</h1>
+    <header>
+    <h1 id="pageTitle">Foundations Sandbox</h1>
     <main id="welcomeMessage">
       <p>
         You've stumbled upon the website I'm using as a sandbox to learn
         html/CSS. Here you'll find a series of blog posts which cover some of
         the material in the developer foundations course I'm taking.
       </p>
+    </header>
     </main>
     <section class="tileLayout">
       <article class="tile blogOther">
@@ -53,12 +55,13 @@
     </section>
   </body>
   <footer>
-    <div><p>Back to top</p></div>
+    <div><div class="footerText"><a href="#pageTitle">Back to top</a></div></div>
+    
     <div>
-      jeremy106<img
+      <span id="logoText">jeremy106</span><img
         src="images/cartweel.jpg"
         alt="profile-pic"
-        id="jeremyLogo"
+        id="cartwheel"
       />
     </div>
   </footer>

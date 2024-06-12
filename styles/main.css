@@ -1,27 +1,36 @@
-/*
-Color Pallette
-#C64E00
-#E35A00
-#F48018
-#E9992F
-#F7B538
-*/
-
 :root {
-  --white1: rgb(250, 249, 247);
+  --white1: fff;
+  --bgColour: #ebe8e6;
   --grey1: rgb(212, 212, 211);
   --grey2: rgb(180, 180, 178);
 }
 
-.container {
+body {
+  margin: 0;
+  background-color: var(--bgColour);
+}
+
+header {
   background-color: var(--white1);
-  /* max-width: 92vw;
-  margin-left: auto;
-  margin-right: auto; */
+  border-bottom: 1px solid var(--grey2);
+  width: 100%;
+  padding: 16px;
+}
+
+footer {
+  background-color: var(--white1);
+  border-top: 1px solid var(--grey2);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .tileLayout {
-  /* background-color: #f7b538; */
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -49,7 +58,18 @@ Color Pallette
   filter: drop-shadow(0 10px 10px var(--grey2));
 }
 
-#jeremyLogo {
+#logoText {
+  position: relative;
+  margin-right: 10px;
+  top: -30%;
+}
+
+.footerText {
+  position: relative;
+  top: 40%;
+}
+
+#cartwheel {
   width: 53px;
   height: auto;
   border-radius: 50%;
