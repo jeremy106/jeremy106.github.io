@@ -7,8 +7,14 @@ Color Pallette
 #F7B538
 */
 
+:root {
+  --white1: rgb(250, 249, 247);
+  --grey1: rgb(212, 212, 211);
+  --grey2: rgb(180, 180, 178);
+}
+
 .container {
-  background-color: #ffffff;
+  background-color: var(--white1);
   /* max-width: 92vw;
   margin-left: auto;
   margin-right: auto; */
@@ -17,7 +23,7 @@ Color Pallette
 .tileLayout {
   /* background-color: #f7b538; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: stretch;
   gap: 20px;
@@ -25,28 +31,20 @@ Color Pallette
 }
 
 .tile {
-  border-radius: 10px;
-  background-color: white;
+  border-radius: 12px 0px 12px 0px;
+  background-color: var(--white1);
   padding: 10px;
   width: 400px;
-  filter: drop-shadow(0 8px 8px gray);
+  filter: drop-shadow(0 8px 8px var(--grey1));
 }
 
 .tileImage {
-  border-radius: 10px;
+  border-radius: 12px 0px 12px 0px;
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.blogTech:hover {
-  filter: drop-shadow(0 10px 10px #f7b538);
-}
-
-.blogCore:hover {
-  filter: drop-shadow(0 10px 10px #f48018);
-}
-
-.blogOther:hover {
-  filter: drop-shadow(0 10px 10px #c64e00);
+.tile:hover {
+  filter: drop-shadow(0 10px 10px var(--grey2));
 }
