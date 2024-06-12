@@ -8,6 +8,7 @@
 body {
   margin: 0;
   background-color: var(--bgColour);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 header {
@@ -23,6 +24,28 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 .tileLayout {
@@ -59,6 +82,7 @@ footer {
 }
 
 #logoText {
+  font-family: 'Orbitron', sans-serif;
   position: relative;
   margin-right: 10px;
   top: -30%;
