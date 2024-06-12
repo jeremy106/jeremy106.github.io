@@ -1,13 +1,23 @@
+/*
+Color Pallette
+#C64E00
+#E35A00
+#F48018
+#E9992F
+#F7B538
+*/
+
 .container {
-  background-color: lightgray;
-  max-width: 95vw;
+  background-color: #ffffff;
+  /* max-width: 92vw;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .tileLayout {
+  /* background-color: #f7b538; */
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
   gap: 20px;
@@ -15,14 +25,28 @@
 }
 
 .tile {
+  border-radius: 10px;
   background-color: white;
-  max-width: 30%;
-  min-width: 200px;
   padding: 10px;
+  width: 400px;
+  filter: drop-shadow(0 8px 8px gray);
 }
 
-.img {
-  /* height: auto; */
-  max-width: 100%;
-  object-fit: contain;
+.tileImage {
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blogTech:hover {
+  filter: drop-shadow(0 10px 10px #f7b538);
+}
+
+.blogCore:hover {
+  filter: drop-shadow(0 10px 10px #f48018);
+}
+
+.blogOther:hover {
+  filter: drop-shadow(0 10px 10px #c64e00);
 }
