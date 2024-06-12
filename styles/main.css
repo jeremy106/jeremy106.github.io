@@ -48,3 +48,10 @@ Color Pallette
 .tile:hover {
   filter: drop-shadow(0 10px 10px var(--grey2));
 }
+
+#jeremyLogo {
+  width: 53px;
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(-2px 2px 5px var(--grey2));
+}
