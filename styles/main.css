@@ -1,0 +1,109 @@
+:root {
+  --white1: fff;
+  --bgColour: #ebe8e6;
+  --grey1: rgb(212, 212, 211);
+  --grey2: rgb(180, 180, 178);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bgColour);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+  background-color: var(--white1);
+  border-bottom: 1px solid var(--grey2);
+  width: 100%;
+  padding: 16px;
+}
+
+main {
+  width: 60%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background-color: var(--white1);
+  border-top: 1px solid var(--grey2);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.tileLayout {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px;
+  /* max-width: 50vw; */
+}
+
+.tile {
+  border-radius: 12px 0px 12px 0px;
+  background-color: var(--white1);
+  padding: 10px;
+  width: 400px;
+  filter: drop-shadow(0 8px 8px var(--grey1));
+}
+
+.tileImage {
+  border-radius: 12px 0px 12px 0px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tile:hover {
+  filter: drop-shadow(0 10px 10px var(--grey2));
+}
+
+#logoText {
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  margin-right: 10px;
+  top: -30%;
+}
+
+.footerText {
+  position: relative;
+  top: 40%;
+}
+
+#cartwheel {
+  width: 53px;
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(-2px 2px 5px var(--grey2));
+}

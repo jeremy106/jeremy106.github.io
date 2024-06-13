@@ -1,17 +1,81 @@
 <html>
   <head>
-    <title>Jeremy's blog</title>
+    <title>Foundations Sandbox</title>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Hi all</h1>
-    <p>Welcome to my website home page.</p>
-    <p>One day it will contain a list of links to all my blogs.</p>
-    <p>
-      In the meantime here is a link to some of
-      <a
-        href="https://openaccess.wgtn.ac.nz/articles/thesis/Discriminative_Stimulus_Properties_of_MDMA_The_Role_of_Serotonin_and_Dopamine/20388006"
-        >my previous work</a
-      >
-    </p>
-  </body>
+  <body class="container">
+    <header>
+    <h1 id="pageTitle">Foundations Sandbox</h1>
+    <main id="welcomeMessage">
+      <p>
+        You've stumbled upon the website I'm using as a sandbox to learn
+        html/CSS. Here you'll find a series of blog posts which cover some of
+        the material in the developer foundations course I'm taking.
+      </p>
+    </header>
+    </main>
+    <section class="tileLayout">
+
+      <article class="tile blogOther">
+        <a href="blog/te-houtaewa-template.html">
+        <img
+          src="images/pexels-anete-lusina-4792285-640x427.jpg"
+          alt="blog subject image"
+          class="tileImage"/>
+        </a>
+        <h3>
+          <a href="blog/te-houtaewa-template.html">Blog Post Template</a>
+        </h3>
+        <p>
+          This is the a blog post template containing a html basic page
+          structure. It does what it says on the tin
+        </p>
+      </article>
+
+      <!-- <article class="tile blogCore">
+        <a href="#">
+          <img
+          src="images/20230207-16-A-painting-by-Picasso-of-a-man-talking-to-an-AI-based-Robot-1-640x640.jpg"
+          alt="blog subject image"
+          class="tileImage"
+          />
+          </a>
+          <h3><a href="#">Placeholder Core Post</a></h3>
+          <p>Placeholder description for a human skills blog post</p>
+      </article>
+      
+      <article class="tile blogTech">
+        <a href="#">
+        <img
+          src="images/code-3337044_1280.jpg"
+          alt="blog subject image"
+          class="tileImage"
+        />
+        </a>
+        <h3><a href="#">Placeholder Tech Post</a></h3>
+        <p>Placeholder description for a technical blog post</p>
+      </article> -->
+    
+    </section>
+  </body> 
+  <footer>
+    <div><div class="footerText"><a href="#pageTitle">Back to top</a></div></div>
+    
+    <div>
+      <span id="logoText">jeremy106</span><img
+        src="images/cartweel.jpg"
+        alt="profile-pic"
+        id="cartwheel"
+      />
+    </div>
+  </footer>
 </html>
