@@ -37,9 +37,11 @@ header {
 }
 
 main {
-  position: relative;
   width: 90vw;
   padding: 5vw;
+  max-width: 1006px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tileLayout {
@@ -68,13 +70,15 @@ main {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border: 1px solid var(--grey1);
 }
 
-.centreImage {
-  position: relative;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+.mainImage {
+  width: 88%;
+  margin: 25px 0px 25px 0px;
+  border-radius: 12px 0px 12px 0px;
+  filter: drop-shadow(0 8px 8px var(--grey1));
+  object-fit: contain;
 }
 
 .tile:hover {

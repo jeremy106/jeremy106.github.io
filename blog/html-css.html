@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Html-CSS</title>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Positioning in CSS</h1>
+      <h2>
+        What are the differences between relative, absolute, and fixed
+        positioning?
+      </h2>
+      <p>
+        An html document is made up of many elements. In fact, pretty much all
+        of the content on the page is an element of some kind. For example each
+        image, block of text, button etc. When the page is loaded by your
+        browser, each element is put on the screen one after the other, in the
+        order in which it appears in the document.
+      </p>
+      <p>
+        Each new element will either appear below the previous element on a new
+        line (Block-Level) or next to the previous element on the same line
+        (Inline). If no other positioning rules are applied, then the position
+        of the element is <b>Static</b> and the element will simply show up on
+        the screen according to its place amongst the other elements in the
+        document. If we want to move the element around on the screen we fisrt
+        choose whether the positioning will be <b>Relative</b>, <b>Absolute</b>,
+        or <b>Fixed</b>.
+      </p>
+      <img
+        src="../images/css-position-diagram.jpg"
+        alt="css-position-diagram"
+        class="mainImage"
+      />
+      <p>
+        <b>Relative</b> positioning uses the natural (static) position as a
+        starting point and then moves the element from there. It can be moved
+        any distance in any direction (i.e. up, down, left, or right) on the
+        page but all these movements are all measured from wherever the element
+        started its life on the page.
+      </p>
+      <p>
+        <b>Absolute</b> positioning might be the easiest to understand. It lets
+        you put an element in a specific place in the document, such as the very
+        top left corner, or 100 pixels from the left hand side etc. Think of it
+        like gluing a cutout or photo onto a piece of paper. As you scroll up
+        and down, the image will move with the rest of the page
+      </p>
+      <p>
+        <b>Fixed</b> positioning places an element at a certain place on your
+        viewport (screen). Its a bit bit like putting a sticky note on your
+        computer monitor in that when you scroll up and down, the rest of the
+        page will move but the sticky note just stays where it is.
+      </p>
+    </main>
+  </body>
+  <footer class="wide topLine">
+    <div class="vertAlign">
+      <a href="#top">Back to top</a>
+    </div>
+    <a href="../index.html">
+      <div class="vertAlign">
+        <div class="orbitron logoText">jeremy106</div>
+        <div>
+          <img src="../images/cartweel.jpg" alt="profile-pic" id="cartwheel" />
+        </div>
+      </div>
+    </a>
+  </footer>
+</html>
