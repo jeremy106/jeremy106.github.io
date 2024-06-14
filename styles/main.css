@@ -44,6 +44,10 @@ main {
   margin-right: auto;
 }
 
+button {
+  all: unset;
+}
+
 .tileLayout {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -104,6 +108,10 @@ footer {
   height: auto;
   border-radius: 50%;
   filter: drop-shadow(-2px 2px 5px var(--grey2));
+}
+
+#darkToggle {
+  padding-right: 10px;
 }
 
 .orbitron {
