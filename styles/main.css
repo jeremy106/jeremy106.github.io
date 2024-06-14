@@ -44,6 +44,10 @@ main {
   margin-right: auto;
 }
 
+button {
+  all: unset;
+}
+
 .tileLayout {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -61,7 +65,7 @@ main {
   background-color: var(--bgWhite);
   padding: 10px;
   width: 400px;
-  filter: drop-shadow(0 8px 8px var(--grey1));
+  filter: drop-shadow(0 6px 6px var(--grey1));
   margin: 10px;
 }
 
@@ -103,7 +107,11 @@ footer {
   width: 53px;
   height: auto;
   border-radius: 50%;
-  filter: drop-shadow(-2px 2px 5px var(--grey2));
+  filter: drop-shadow(2px 2px 5px var(--grey2));
+}
+
+#darkToggle {
+  padding-right: 10px;
 }
 
 .orbitron {
@@ -111,12 +119,12 @@ footer {
 }
 
 a:link {
-  color: #333333;
+  color: inherit;
   text-decoration: none;
 }
 
 a:visited {
-  color: #333333;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -126,4 +134,9 @@ a:hover {
 
 a:active {
   text-decoration: underline;
+}
+
+.darkmode {
+  background-color: #333333;
+  color: var(--grey1) !important;
 }
