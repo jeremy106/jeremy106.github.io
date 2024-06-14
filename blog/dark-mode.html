@@ -16,14 +16,13 @@
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle('darkmode')
-      document.querySelector('footer').classList.toggle('darkmode')
-      document.querySelector('a.light-dark').classList.toggle('darkmode')
-      document.querySelector('div.light-dark').classList.toggle('darkmode')
+      document.querySelectorAll('.light-dark').forEach((node) => {
+        node.classList.toggle('darkmode')
+      })
     }
   </script>
 
-  <body class=".light-dark">
+  <body class="light-dark">
     <main>
       <h1>Dark Mode Experiment</h1>
       <h2>E kore e mau i a koe, he wae kai pakiaka.</h2>
