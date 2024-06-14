@@ -127,3 +127,8 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+
+.darkmode {
+  background-color: #333333;
+  color: var(--grey1) !important;
+}
