@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1"
     />
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/position-blog-examples.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
       rel="stylesheet"
@@ -16,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@800&display=swap" rel="stylesheet"/>
   </head>
 
   <script>
@@ -55,12 +57,24 @@
           class="imageBlock"
         />
         <p>
-          <b>Relative</b> positioning uses the natural (static) position as a
-          starting point and then moves the element from there. It can be moved
+          <h3>Relative Positioning</h3>
+          <b>Relative</b> positioning uses the original (static) position of the element as a
+          starting point and then moves it there. The element can be moved
           any distance in any direction (i.e. up, down, left, or right) on the
           page but all these movements are all measured from wherever the
           element started its life on the page.
         </p>
+        <p>In the example below, a CSS class has been applied to one of the elements to shift it to the right <em>relative</em> to it's static position</p>
+        <div class="flexEven">
+          <p class="codeBlock">
+            <span class="tag">&ltp></span>Apple<span class="tag">&lt/p></span><br><span class="tag">&ltp class="nudge"></span>Orange<span class="tag">&lt/p></span><br><span class="tag">&ltp></span>Apple<span class="tag">&lt/p></span></p>
+                  
+          <div>
+            <p class="relativeExample">Apple</p>
+            <p class="relativeExample" style="position: relative; left: 30px; color: orange; border-color: orange;">Orange</p>
+            <p class="relativeExample">Apple</p>
+          </div>
+        </div>
         <p>
           <b>Absolute</b> positioning might be the easiest to understand. It
           lets you put an element in a specific place in the document, such as

@@ -89,6 +89,12 @@ h1 {
   padding: 20px;
 }
 
+.flexEven {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 #footerNav {
   display: flex;
   justify-content: flex-start;
