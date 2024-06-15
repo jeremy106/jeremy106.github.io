@@ -14,73 +14,121 @@
     />
     <title>Learning Plan</title>
   </head>
-  <body>
+  <script>
+    function toggleDarkMode() {
+      document.querySelectorAll('.darkToggle').forEach((node) => {
+        node.classList.toggle('darkmode')
+      })
+    }
+  </script>
+  <body class="darkToggle">
     <main>
-      <h1>Learning Plan</h1>
+      <section class="textBlock">
+        <h1>Learning Plan</h1>
 
-      <h2>What is your long term goal or career pathway?</h2>
-      <p>
-        My plan is to find a job as a junior/intermediate developer and gain
-        experience in a reasonably mature tech/SaaS company. Eventually I hope
-        to come up with some ideas / products to develop personally both as a
-        hobby and as a secondary source of income.
-      </p>
+        <h2>What is your long term goal or career pathway?</h2>
+        <p>
+          My plan is to find a job as a junior/intermediate developer and gain
+          experience in a reasonably mature tech/SaaS company. Eventually I hope
+          to come up with some ideas / products to develop personally both as a
+          hobby and as a secondary source of income.
+        </p>
 
-      <h2>
-        What are your strengths and limitations when it comes to learning?
-      </h2>
-      <p>
-        I am confident that I can learn and understand anything if I'm given the
-        time to think it through. I struggle if information is dumped on me in
-        no particular order or without structure and I don't like learning
-        things before they are relevant to me. If I'm asked to do something
-        myself and given some kind of starting point, I usually figure things
-        out on my own pretty quickly.
-      </p>
-      <h2>
-        What skills (non-technical/human skills) would you like to see developed
-        in yourself while at Dev Academy?
-      </h2>
-      <p>
-        I would like to get better at sharing my work/processes with other
-        people and to seek feedback earlier and more often. I have a tendancy to
-        isolate myself until I think everything is perfect before sharing my
-        work with others.
-      </p>
+        <h2>
+          What are your strengths and limitations when it comes to learning?
+        </h2>
+        <p>
+          I am confident that I can learn and understand anything if I'm given
+          the time to think it through. I struggle if information is dumped on
+          me in no particular order or without structure and I don't like
+          learning things before they are relevant to me. If I'm asked to do
+          something myself and given some kind of starting point, I usually
+          figure things out on my own pretty quickly.
+        </p>
+        <h2>
+          What skills (non-technical/human skills) would you like to see
+          developed in yourself while at Dev Academy?
+        </h2>
+        <p>
+          I would like to get better at sharing my work/processes with other
+          people and to seek feedback earlier and more often. I have a tendancy
+          to isolate myself until I think everything is perfect before sharing
+          my work with others.
+        </p>
 
-      <h2>How will you manage your workload in this programme?</h2>
-      <p>
-        I expect to have no issues managing my workload for this programme. I
-        have no dependents and a supportive partner who is ready to leave me to
-        my own devices as required over the coming weeks/months. I intend to
-        strictly enforce some periods of 'downtime' in the late evenings and
-        weekends to prevent myself from burning out.
-      </p>
-      <p>
-        If things become stressful, I always know I can straighten things out by
-        doing some exercise. I have years of elite sports experience to fall
-        back on here.
-      </p>
-      <p>
-        If I find myself stuck on something for more than an hour I intend to
-        seek help from my Facilitator or a peer who I consider knowledgeable.
-      </p>
-      <h2>What do you expect from the Facilitation team?</h2>
-      <p>
-        The main thing I'm expecting from the Facilitation team is for feedback
-        and encouragement to push myself. I aim for excellence in all things so
-        I will not be upset to have mistakes pointed out or to be given
-        suggestions on how I can make something even better.
-      </p>
-      <h2>
-        Is there any scheduling information such as block-out times when you are
-        committed to other things?
-      </h2>
-      <p>
-        I hope to maintain a weekly hobby night that I host with some friends on
-        Thursday evenings however I will be willing to give this up during
-        bootcamp if the workload makes this untenable.
-      </p>
+        <h2>How will you manage your workload in this programme?</h2>
+        <p>
+          I expect to have no issues managing my workload for this programme. I
+          have no dependents and a supportive partner who is ready to leave me
+          to my own devices as required over the coming weeks/months. I intend
+          to strictly enforce some periods of 'downtime' in the late evenings
+          and weekends to prevent myself from burning out.
+        </p>
+        <p>
+          If things become stressful, I always know I can straighten things out
+          by doing some exercise. I have years of elite sports experience to
+          fall back on here.
+        </p>
+        <p>
+          If I find myself stuck on something for more than an hour I intend to
+          seek help from my Facilitator or a peer who I consider knowledgeable.
+        </p>
+        <h2>What do you expect from the Facilitation team?</h2>
+        <p>
+          The main thing I'm expecting from the Facilitation team is for
+          feedback and encouragement to push myself. I aim for excellence in all
+          things so I will not be upset to have mistakes pointed out or to be
+          given suggestions on how I can make something even better.
+        </p>
+        <h2>
+          Is there any scheduling information such as block-out times when you
+          are committed to other things?
+        </h2>
+        <p>
+          I hope to maintain a weekly hobby night that I host with some friends
+          on Thursday evenings however I will be willing to give this up during
+          bootcamp if the workload makes this untenable.
+        </p>
+      </section>
     </main>
+    <footer class="borderTop">
+      <nav class="flexSpaceBetween">
+        <div id="footerNav" class="flex">
+          <button id="darkToggle" onclick="toggleDarkMode()">
+            <svg width="30" height="30">
+              <circle cx="15" cy="15" r="7" fill="currentColor" />
+              <line
+                id="ray"
+                x1="15"
+                x2="15"
+                y1="1"
+                y2="4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <use href="#ray" transform="rotate(45 15 15)" />
+              <use href="#ray" transform="rotate(90 15 15)" />
+              <use href="#ray" transform="rotate(135 15 15)" />
+              <use href="#ray" transform="rotate(180 15 15)" />
+              <use href="#ray" transform="rotate(225 15 15)" />
+              <use href="#ray" transform="rotate(270 15 15)" />
+              <use href="#ray" transform="rotate(315 15 15)" />
+            </svg>
+          </button>
+          <a href="#top">Back to top</a>
+        </div>
+        <a id="logo" href="../index.html">
+          <div id="logoText">jeremy106</div>
+          <div>
+            <img
+              id="logoImage"
+              src="../images/cartweel.jpg"
+              alt="profile-pic"
+            />
+          </div>
+        </a>
+      </nav>
+    </footer>
   </body>
 </html>

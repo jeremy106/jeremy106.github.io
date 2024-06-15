@@ -19,27 +19,27 @@
 
   <script>
     function toggleDarkMode() {
-      document.querySelectorAll('.light-dark').forEach((node) => {
+      document.querySelectorAll('.darkToggle').forEach((node) => {
         node.classList.toggle('darkmode')
       })
     }
   </script>
 
-  <body class="light-dark">
-    <div class="wide bottomLine light-dark">
-      <header>
-        <h1 class="orbitron">Foundations Sandbox</h1>
+  <body class="darkToggle">
+    <header class="borderBottom">
+      <div class="mainText alignCenter">
+        <h1 id="homeBanner">Foundations Sandbox</h1>
         <p>
           You've stumbled upon the website I'm using as a sandbox to learn
           html/CSS. Here you'll find a series of blog posts which cover some of
           the material in the developer foundations course I'm taking.
         </p>
-      </header>
-    </div>
+      </div>
+    </header>
 
-    <div class="greyBackground light-dark">
-      <section class="tileLayout">
-        <article class="tile light-dark">
+    <main>
+      <section class="tileLayout greyBackground darkToggle">
+        <article class="tile darkToggle">
           <a href="blog/html-css.html">
             <img
               src="images/css-position-diagram.jpg"
@@ -54,7 +54,7 @@
           </a>
         </article>
 
-        <article class="tile light-dark">
+        <article class="tile darkToggle">
           <a href="blog/te-houtaewa-template.html">
             <img
               src="images/pexels-anete-lusina-4792285-640x427.jpg"
@@ -69,47 +69,46 @@
           </a>
         </article>
       </section>
-    </div>
-  </body>
+    </main>
 
-  <footer class="wide topLine light-dark">
-    <div class="vertAlign">
-      <div id="darkToggle">
-        <button onclick="toggleDarkMode()">
-          <svg width="30" height="30">
-            <circle cx="15" cy="15" r="7" fill="currentColor" />
-            <line
-              id="ray"
-              x1="15"
-              x2="15"
-              y1="1"
-              y2="4"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-width="2"
-            />
-            <use href="#ray" transform="rotate(45 15 15)" />
-            <use href="#ray" transform="rotate(90 15 15)" />
-            <use href="#ray" transform="rotate(135 15 15)" />
-            <use href="#ray" transform="rotate(180 15 15)" />
-            <use href="#ray" transform="rotate(225 15 15)" />
-            <use href="#ray" transform="rotate(270 15 15)" />
-            <use href="#ray" transform="rotate(315 15 15)" />
-          </svg>
-        </button>
-      </div>
-      <div>
-        <a href="#top" class="light-dark">Back to top</a>
-      </div>
-    </div>
-
-    <a href="../index.html" class="light-dark">
-      <div class="vertAlign">
-        <div class="orbitron logoText light-dark">jeremy106</div>
-        <div>
-          <img src="../images/cartweel.jpg" alt="profile-pic" id="cartwheel" />
+    <footer class="borderTop">
+      <nav class="flexSpaceBetween">
+        <div id="footerNav" class="flex">
+          <button id="darkToggle" onclick="toggleDarkMode()">
+            <svg width="30" height="30">
+              <circle cx="15" cy="15" r="7" fill="currentColor" />
+              <line
+                id="ray"
+                x1="15"
+                x2="15"
+                y1="1"
+                y2="4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <use href="#ray" transform="rotate(45 15 15)" />
+              <use href="#ray" transform="rotate(90 15 15)" />
+              <use href="#ray" transform="rotate(135 15 15)" />
+              <use href="#ray" transform="rotate(180 15 15)" />
+              <use href="#ray" transform="rotate(225 15 15)" />
+              <use href="#ray" transform="rotate(270 15 15)" />
+              <use href="#ray" transform="rotate(315 15 15)" />
+            </svg>
+          </button>
+          <a href="#top">Back to top</a>
         </div>
-      </div>
-    </a>
-  </footer>
+        <a id="logo" href="../index.html">
+          <div id="logoText">jeremy106</div>
+          <div>
+            <img
+              id="logoImage"
+              src="../images/cartweel.jpg"
+              alt="profile-pic"
+            />
+          </div>
+        </a>
+      </nav>
+    </footer>
+  </body>
 </html>
