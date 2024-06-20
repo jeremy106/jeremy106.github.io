@@ -1,6 +1,9 @@
 // -- JAVASCRIPT CAFE! -- //
 
-// PRODUCTS //
+//----VARIABLES----//
+
+// Cafe 
+let cash = 0
 let products = {
 
   whiteCoffee: {
@@ -40,18 +43,40 @@ let products = {
   }
 }
 
+// Order history //
+orderHistory = []
+let orderCounter = 0
+
+// Customer
+let customer = {
+  order: [],
+  money: 0
+}
+let minOrderSize = 1
+let maxOrderSize = 5
+let minCustomerMoney = 1000
+let maxCustomerMoney = 100000
+let productNames = Object.keys(products)
+
+
+
+//----FUNCTIONS----//
+
+// Page Setup //
+
 function displayProducts() {
 
-  //Check for out of stock
   let productNames = Object.keys(products)
-  for (let i = 0; i < productNames.length; i++){
-    let productName = productNames[i]
-    if(products[productName].stock <= 0){
-      document.getElementById(productName).classList.add("outOfStock")
-    } else {
-      document.getElementById(productName).classList.remove("outOfStock")
-    }
 
+  for (let i = 0; i < productNames.length; i++){
+    
+    let item = productNames[i]
+    
+    if(productIsInStock(item)){ 
+      document.getElementById(item).classList.remove("outOfStock")
+    } else {
+      document.getElementById(item).classList.add("outOfStock")
+    }
   }
 
   document.getElementById('whiteCoffee').innerHTML = `White Coffee: ${products.whiteCoffee.stock}`
@@ -63,38 +88,56 @@ function displayProducts() {
 
 }
 
-displayProducts()
 
-// RESTOCK //
 
-function restock(productName) {
+function createRestockButtons () {
+  let parents = document.getElementsByClassName("menuItem")
 
-  if(products[productName].wholesaleCost <= cash){
+  for (let i=0; i < parents.length; i++){
 
-    products[productName].stock++
-    cash -= products[productName].wholesaleCost
-    displayProducts()
-    displayCash()
-  } else {
-    alert(`You can't afford to restock ${productName}`)
+    let parent = parents[i]
+    let childId = parent.childNodes[0].nextSibling.id
+    let button = document.createElement("button")
+    button.classList.add("button","restock")
+    button.innerHTML = "Restock"
+    button.addEventListener("click", () => {restock(childId)})
+    parent.appendChild(button)
+
   }
-
 }
 
 
 
-// CUSTOMERS //
+function displayCustomerOrder () {
+  document.getElementById("customerOrder").innerHTML = customer.order 
+}
+  
 
-let customer = {
-  order: [],
-  money: 0
+
+function displayCash () {
+  document.getElementById("cash").innerHTML = `Cash: $${cash}`
 }
 
-let minOrderSize = 1
-let maxOrderSize = 5
-let minCustomerMoney = 1
-let maxCustomerMoney = 100
-let productNames = Object.keys(products)
+
+
+function updateHistory() {
+  
+  let orderNum = orderHistory.length - 1 
+
+  let text = `<b>OrderID: ${orderHistory[orderNum].orderId}</b><br>
+  Status: ${orderHistory[orderNum].status}<br>
+  Items Ordered: ${orderHistory[orderNum].productsOrdered}<br>
+  Amount Paid: $${orderHistory[orderNum].amountPaid}`
+
+  let para = document.createElement("p")
+  para.classList.add("history")
+  para.innerHTML = text
+  document.getElementById("orderHistory").appendChild(para)
+
+}
+
+  
+// Cafe Functionality //
 
 function generateCustomerOrder() {
   let orderSize = getRandomInt(minOrderSize, maxOrderSize)
@@ -114,42 +157,7 @@ function generateCustomerOrder() {
 
   }
 
-function displayCustomerOrder () {
-  document.getElementById("customerOrder").innerHTML = customer.order 
-}
 
-// document.getElementById("generateOrder").addEventListener('click', generateCustomerOrder)
-document.getElementById("generateOrder").onclick = generateCustomerOrder
-
-
-// TRANSACTIONS //
-
-
-// Check order
-function customerCanPay() {
-  let total = 0
-  
-  for (let i = 0; i < customer.order.length; i++) {
-    let productName = customer.order[i]
-    total += products[productName].price
-  }
-
-  return total <= customer.money
-}
-
-
-
-let cash = 0
-
-function displayCash () {
-  document.getElementById("cash").innerHTML = `Cash: $${cash}`
-}
-
-displayCash()
-
-
-let orderCounter = 0
-orderHistory = []
 
 function fillOrder() {
 
@@ -158,29 +166,29 @@ function fillOrder() {
   let filledProducts = []
   orderCounter++
   
+  if(customerCanPay()){
 
-  if(!customerCanPay()){
-    orderStatus = "REJECTED"
-    alert(`I'm sorry, you can't afford this...`)
-
-  } else {
-   
-    
     for (let i = 0; i < customer.order.length; i++) {
       
-      let productName = customer.order[i]
+      let item = customer.order[i]
       
-      if(products[productName].stock > 0){
+      if(productIsInStock(item)){
         
-        total += products[productName].price
-        products[productName].stock--
-        filledProducts.push(productName)
+        total += products[item].price
+        products[item].stock--
+        filledProducts.push(item)
         
       } else {
-        alert(`Yea nah, we're out of ${productName}`)
+        alert(`Yea nah, we're out of ${item}`)
       }
     }
     orderStatus = "PAID"
+    
+  } else {
+    
+    orderStatus = "REJECTED"
+    alert(`I'm sorry, you can't afford this...`)
+    
   }
 
   orderHistory.push({
@@ -192,10 +200,7 @@ function fillOrder() {
     amountPaid: total
   })
 
-  // updateHistory()
-
   cash += total
-
   customer.order = []
   customer.money = 0
 
@@ -206,41 +211,66 @@ function fillOrder() {
   
 }
 
-document.getElementById("fillOrder").onclick = fillOrder
 
-
-
-// Show order history //
-
-
-function updateHistory() {
-  
-  let orderNum = orderHistory.length - 1 
-
-  let text = `<b>OrderID: ${orderHistory[orderNum].orderId}</b><br>
-  Status: ${orderHistory[orderNum].status}<br>
-  Items Ordered: ${orderHistory[orderNum].productsOrdered}<br>
-  Amount Paid: $${orderHistory[orderNum].amountPaid}`
-
-  let para = document.createElement("p")
-  para.classList.add("history")
-  para.innerHTML = text
-  document.getElementById("orderHistory").appendChild(para)
-
-}
 
 function showHistory() {
   document.getElementById("orderHistory").classList.toggle("hidden")
 }
 
-document.getElementById("showHistory").onclick = showHistory
 
 
-// OTHER FUNCTIONS //
+function restock(productName) {
+
+  if(products[productName].wholesaleCost <= cash){
+
+    products[productName].stock++
+    cash -= products[productName].wholesaleCost
+    displayProducts()
+    displayCash()
+  } else {
+    alert(`You can't afford to restock ${productName}`)
+  }
+
+}
+
+
+// Utility //
 
 function getRandomInt (min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+
+
+function productIsInStock(item){
+  return products[item].stock > 0
+}
+
+
+
+function customerCanPay() {
+  let total = 0
+  
+  for (let i = 0; i < customer.order.length; i++) {
+    let productName = customer.order[i]
+    total += products[productName].price
+  }
+  
+  return total <= customer.money
+}
+
+
+
+
+//---INITIALISE PAGE---//
+
+displayProducts()
+displayCash()
+createRestockButtons()
+
+document.getElementById("generateOrder").onclick = generateCustomerOrder
+document.getElementById("fillOrder").onclick = fillOrder
+document.getElementById("showHistory").onclick = showHistory
 
