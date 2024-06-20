@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Fundamentals</title>
+    <meta charset="UTF-8" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <script>
+    function toggleDarkMode() {
+      document.querySelectorAll('.darkToggle').forEach((node) => {
+        node.classList.toggle('darkmode')
+      })
+    }
+  </script>
+
+  <body class="darkToggle">
+    <main>
+      <div class="textBlock">
+        <h1>Javascript Fundamentals</h1>
+        <h2>Key concepts from the first week of Javascript</h2>
+        <p>Intro paragraph</p>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <h3>Javascript vs HTML vs CSS</h3>
+          <p>Some kind of analogy</p>
+        </div>
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+        <div>
+          <h3>Control Flow</h3>
+          <p>Content</p>
+        </div>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <h3>Loops</h3>
+          <p>content</p>
+        </div>
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+        <div>
+          <h3>The DOM</h3>
+          <p>Content</p>
+        </div>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <h3>Arrays vs Objects</h3>
+          <p>content</p>
+        </div>
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+      </div>
+
+      <div class="flexColumns">
+        <div>
+          <img
+            class="imageBlock imageHalf"
+            src="../images/code-3337044_1280.jpg"
+            alt="#"
+          />
+        </div>
+        <div>
+          <h3>Functions</h3>
+          <p>Content</p>
+        </div>
+      </div>
+
+      <!--  <div class="flexEven">
+        <div>
+          <h3>title</h3>
+          <p>content</p>
+        </div>
+        <div><img src="#" alt="#" /></div>
+      </div>
+
+      <div class="flexEven">
+        <div><img src="#" alt="#" /></div>
+        <div>
+          <h3>title</h3>
+          <p>Content</p>
+        </div>
+      </div> -->
+    </main>
+    <footer class="borderTop">
+      <nav class="flexSpaceBetween">
+        <div id="footerNav" class="flex">
+          <button id="darkToggle" onclick="toggleDarkMode()">
+            <svg width="30" height="30">
+              <circle cx="15" cy="15" r="7" fill="currentColor" />
+              <line
+                id="ray"
+                x1="15"
+                x2="15"
+                y1="1"
+                y2="4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <use href="#ray" transform="rotate(45 15 15)" />
+              <use href="#ray" transform="rotate(90 15 15)" />
+              <use href="#ray" transform="rotate(135 15 15)" />
+              <use href="#ray" transform="rotate(180 15 15)" />
+              <use href="#ray" transform="rotate(225 15 15)" />
+              <use href="#ray" transform="rotate(270 15 15)" />
+              <use href="#ray" transform="rotate(315 15 15)" />
+            </svg>
+          </button>
+          <a href="#top">Back to top</a>
+        </div>
+        <a id="logo" href="../index.html">
+          <div id="logoText">jeremy106</div>
+          <div>
+            <img
+              id="logoImage"
+              src="../images/cartweel.jpg"
+              alt="profile-pic"
+            />
+          </div>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
