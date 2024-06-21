@@ -21,6 +21,16 @@ h1 {
   font-size: xx-large;
 }
 
+.codeBlock {
+  font-family: monospace;
+  background-color: #272822;
+  padding: 30px;
+  color: var(--grey1);
+  border: 1px solid var(--grey1);
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
 #homeBanner {
   font-size: xxx-large;
   font-family: 'Orbitron';
@@ -157,4 +167,8 @@ h1 {
 
 .imageHalf {
   max-width: 30vw;
+}
+
+.tag {
+  color: orange;
 }
