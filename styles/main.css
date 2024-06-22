@@ -3,6 +3,7 @@
   --bgGrey: ebe8e6;
   --grey1: rgb(212, 212, 211);
   --grey2: rgb(180, 180, 178);
+  --grey3: #6d6d6d;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -12,13 +13,23 @@ a:link {
   text-decoration: none;
 }
 
+header {
+  padding: 20px;
+  border-bottom: 1px solid var(--grey2);
+}
+
 body {
   width: 100vw;
   margin: 0;
 }
 
 h1 {
-  font-size: xx-large;
+  font-family: 'Orbitron';
+  font-size: xxx-Large;
+}
+
+.orbitron {
+  font-family: 'Orbitron';
 }
 
 .codeBlock {
@@ -33,11 +44,6 @@ h1 {
 
 .comment {
   color: cornflowerblue;
-}
-
-#homeBanner {
-  font-size: xxx-large;
-  font-family: 'Orbitron';
 }
 
 .borderBottom {
@@ -80,8 +86,16 @@ h1 {
   border-radius: 12px 0px 12px 0px;
   padding: 10px;
   width: 400px;
-  filter: drop-shadow(0 3px 3px var(--grey1));
+  filter: drop-shadow(3px 3px 3px var(--grey1));
   margin: 10px;
+}
+
+.tile.darkmode {
+  filter: drop-shadow(3px 3px 3px black);
+}
+
+.tileLayout.darkmode {
+  background-color: var(--grey3);
 }
 
 .tileImage {
@@ -175,4 +189,18 @@ h1 {
 
 .tag {
   color: orange;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    /* font-family: 'Orbitron'; */
+    font-size: xx-large;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    /* font-family: 'Orbitron'; */
+    font-size: x-large;
+  }
 }
