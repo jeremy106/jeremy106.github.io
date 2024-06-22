@@ -56,7 +56,7 @@
         <b>if/else</b> statement.
       </p>
       <p class="codeBlock">
-        <span style="color: cornflowerblue"
+        <span class="comment"
           >// How to respond when the empty light in your car comes on</span
         ><br />
         <span class="tag">if (</span> petrolLightIsOn
@@ -84,6 +84,7 @@
         is usually achieved with <b>loops</b>
       </p>
       <p class="codeBlock">
+        <span class="comment">// Loop through doing the dishes</span><br>
         <span class="tag"> for ( let</span> i=1, i&ltdirtyDishes.length,
         i++<span class="tag"
           >) {<br />
@@ -106,17 +107,18 @@
       </p>
       <h3>Arrays vs Objects</h3>
       <p>Arrays and Objects are both used to store information that our program might need, but do so in different ways. An Array is a bit like a bucket. It is a generic container that you can put pretty much anything into, either for storage or to keep things organised. Unlike a bucket however, everyhing that goes into an Array is assigned a position (index) so that we can easily retrieve items from it.</p>
-      <p class="codeBlock"><span style="color: cornflowerblue">//An array containing some of my favourite extraterrestial satellites</span><br>&emsp;<span class="tag">let</span> moons = ['Phobos', 'Deimos', 'Europa', 'Ganymede']</p>
-      <p>An Object is also a container for information, but each entry exists as a combination if a <b>name</b> and a <b>value</b>. Its a bit like an ID card which lists various attributes or features about the thing it represents</p>
-      <p class="codeBlock"><span style="color: cornflowerblue">//An object which stores some interesting moon properites </span><br><span class="tag">let</span> deimos = {<br>
+      <p class="codeBlock"><span class="comment">// An array containing some of my favourite extraterrestial satellites</span><br>&emsp;<span class="tag">let</span> moons = ['Phobos', 'Deimos', 'Europa', 'Ganymede']</p>
+      <p>An Object is also a container for information, but each entry (property) exists as a combination if a <b>name</b> and a <b>value</b>. Its a bit like an ID card which lists various attributes or features about the thing it represents. The properties in an object might represent simple values like the example below, but an object can also contain functions (methods) or even other objects!</p>
+      <p class="codeBlock"><span class="comment">// An object which stores some interesting moon properites </span><br><span class="tag">let</span> deimos = {<br>
       &emsp;orbitsPlanet: "Mars",<br>
       &emsp;radiusKm: 6.27 ,<br>
       &emsp;craters: ["Voltaire","Swift"],<br>
       }</p>
       <h3>Functions</h3>
-      <p>Content</p>
+      <p>A function is a self-contained piece of code which when called upon, performs some action or takes some input and gives back a some useful output. As an analogy, if we were to imagine making breakfast as a computer program, we might have a toaster function. The function is designed to accept a certain input (argument) of <b>bread</b> and give back (return) a helpful output of <b>toast</b>.</p> Functions are helpful if we need to repeat a certain task and don't want to write out the same code each time. A well named function can also help to make code easier to understand for a human reader.
       <h3>The DOM</h3>
-      <p>Content</p>
+      <p>DOM stands for <b>Document Object Model</b> and it is a data representation of the content in an HTML file. It is not a programming language per se but it can be used by other languages to access or edit an HTML document by representing all of the different elements as nodes in a heirarchical tree structure.</p>
+      <img src="../images/dom-make-03-00006-g001.webp" class="imageBlock"/>
     </main>
 
     <footer class="borderTop">

@@ -31,6 +31,10 @@ h1 {
   line-height: 1.8;
 }
 
+.comment {
+  color: cornflowerblue;
+}
+
 #homeBanner {
   font-size: xxx-large;
   font-family: 'Orbitron';
