@@ -47,13 +47,12 @@
       </p>
       <h3>Control Flow</h3>
       <p>
-        To make a useful program, you need a way for your code to make decisions
-        about what to do. Control flow refers to the order in which a computer
-        progam carries out all of the instructions it has been given. Most of
-        the time a program will run one line after another in the order in which
-        they're written. But what if we want to make our program do something
-        different depending on what has happened beforehand? One option is to
-        use an
+        Control flow refers to the order in which a computer progam carries out
+        all of the instructions it has been given. Most of the time a program
+        will run one line after another in the order in which they're written.
+        But what if we want to make our program do something different depending
+        on what has happened beforehand? To make a useful program, we need a way
+        for our code to make decisions about what to do. One option is to use an
         <b>if/else</b> statement.
       </p>
       <p class="codeBlock">
@@ -78,7 +77,34 @@
         any complex decision
       </p>
       <h3>Loops</h3>
-      <p>content</p>
+      <p>
+        One of the best things about computers is that they never complain about
+        doing the same thing over and over again. Repeating a simple operation
+        over and over again is a common occurence in computer programming and it
+        is usually achieved with <b>loops</b>
+      </p>
+      <p class="codeBlock">
+        <span class="tag"> for ( let</span> i=1, i&ltdirtyDishes.length,
+        i++<span class="tag"
+          >) {<br />
+          &emsp;let</span
+        >
+        dish = dirtyDishes[i]<br />
+        <span class="tag">&emsp;let</span> cleanDish = scrub(dish)<br />
+        <span class="tag"></span>&emsp;dishRack.push(cleanDish)<br />
+        <span class="tag">}</span>
+      </p>
+      <p>
+        The loop above is doing something we all wish we could ask a robot to do: Clean the dishes. The syntax of a loop can be confusing at first glance, but all its
+        really saying is:
+      <ul>
+          <li>Start counting here:&emsp; <b>1</b></li>
+          <li>Keep counting until you get here:&emsp; <span><b>The number of things in the dirtyDishes array</b></span></li>
+          <li>Every time you finish the task below update the count:&emsp; <b>Increase by 1</b></li>
+      </ul>
+      So in real world terms, Starting with the first dirty dish, it takes the dish from the dirty pile (an array), scrubs the dish, then puts it in the clean pile (another array). It reapeats this for one dish one at a time until all the dirty dishes are clean.
+      </p>
+
       <h3>The DOM</h3>
       <p>Content</p>
       <h3>Arrays vs Objects</h3>
