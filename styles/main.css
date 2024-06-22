@@ -58,6 +58,10 @@ h1 {
   background-color: var(--bgGrey);
 }
 
+.greyBackground.darkmode {
+  background-color: var(--grey3);
+}
+
 .mainText {
   width: 60%;
   max-width: 600px;
