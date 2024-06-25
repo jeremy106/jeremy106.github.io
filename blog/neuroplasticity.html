@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neuroplasticity & Growth Mindset</title>
+    <meta charset="UTF-8" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <script>
+    function toggleDarkMode() {
+      document.querySelectorAll('.darkToggle').forEach((node) => {
+        node.classList.toggle('darkmode')
+      })
+    }
+
+    // window.onload = toggleDarkMode
+  </script>
+
+  <body class="darkToggle">
+    <header class="flexSpaceBetween">
+      <a href="../index.html" class="orbitron">Homepage</a>
+      <button id="darkToggle" onclick="toggleDarkMode()">
+        <svg width="30" height="30">
+          <circle cx="15" cy="15" r="7" fill="currentColor" />
+          <line
+            id="ray"
+            x1="15"
+            x2="15"
+            y1="1"
+            y2="4"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+          />
+          <use href="#ray" transform="rotate(45 15 15)" />
+          <use href="#ray" transform="rotate(90 15 15)" />
+          <use href="#ray" transform="rotate(135 15 15)" />
+          <use href="#ray" transform="rotate(180 15 15)" />
+          <use href="#ray" transform="rotate(225 15 15)" />
+          <use href="#ray" transform="rotate(270 15 15)" />
+          <use href="#ray" transform="rotate(315 15 15)" />
+        </svg>
+      </button>
+    </header>
+    <main>
+      <section class="textBlock">
+        <h1>Neuroplasticity & Growth Mindset</h1>
+        <h2>Our brains can change</h2>
+        <p>
+          The brain is made up of billions of connected cells called Neurons and
+          is one of the most complex objects in the known universe. All of our
+          skills, traits, and memories exist in the brain as groups of related
+          neurons firing together as a network. Neuroplasticity refers to the
+          brains ability to change and adapt these networks as we grow.
+        </p>
+        <p>
+          In the last few decades it has been shown that brains remain able to
+          adapt beyond our childhood years and well into adulthood. Encouragingly,
+          even simply knowing that this is the case has been shown to improve
+          learning outcomes in <a href="https://pubmed.ncbi.nlm.nih.gov/17328703/">
+          <span style="text-decoration: underline">tightly controlled studies</span></a>.
+          Knowing that your abilities can improve with practice can increase motivation, 
+          which in turn can increase engagement and lead to a virtuous cycle of improvement.
+        </p>
+        <img src="../images/best-board-games-adults-1585587217.jpg" alt="board-game" class="imageBlock"/>
+        <p>
+          There are many ways to promote neuroplasticity in adulthood but most boil down to
+          stimulating your brain or getting out of your comfort zone. Some of my favourite ways
+          to achieve this are by playing and learning new board games. This often involves understanding 
+          some new concepts, testing my problem solving skills, and interacting with friends.
+        </p>
+        <p>
+          Other important steps to take include being physically active (i.e. exercise) as well as getting
+          high quality sleep. For more information check out this helpful article: 
+          <a href="https://www.verywellmind.com/what-is-brain-plasticity-2794886#toc-how-to-improve-neuroplasticity">
+          <span style="text-decoration: underline">How Neuroplasticity Works</span></a>.
+        </p>
+        <p>
+
+        </p>
+        <h2>Attitude is the key</h2>
+        <p>text</p>
+      </section>
+    </main>
+    <!-- this is a comment. -->
+    <footer class="borderTop">
+      <nav class="flexSpaceBetween">
+        <div id="footerNav" class="flex">
+          <a href="#top" class="orbitron">Back to top</a>
+        </div>
+        <a id="logo" href="../index.html">
+          <div id="logoText">jeremy106</div>
+          <div>
+            <img
+              id="logoImage"
+              src="../images/cartweel.jpg"
+              alt="profile-pic"
+            />
+          </div>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
