@@ -180,6 +180,11 @@ h1 {
   border-radius: 5px;
 }
 
+.selectorButton:hover {
+  background-color: var(--grey3);
+  color: white;
+}
+
 #darkToggle {
   all: unset;
 }

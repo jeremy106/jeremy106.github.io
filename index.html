@@ -153,22 +153,40 @@
       })
     }
 
-    function showHide(tileType) {
+    function showTile(tileType) {
       document.querySelectorAll('.' + tileType).forEach((node) => {
-        node.classList.toggle('hidden')
+        node.classList.remove('hidden')
+      })
+    }
+
+    function hideTile(tileType) {
+      document.querySelectorAll('.' + tileType).forEach((node) => {
+        node.classList.add('hidden')
       })
     }
 
     // Each button should untoggle the others... Tech button should untoggle core button and vice versa.
 
     document.getElementById('techPosts').addEventListener('click', () => {
-      showHide('core')
+      showTile('tech')
     })
 
     document.getElementById('corePosts').addEventListener('click', () => {
-      showHide('tech')
+      showTile('core')
     })
 
-    window.onload = toggleDarkMode
+    document.getElementById('techPosts').addEventListener('click', () => {
+      hideTile('core')
+    })
+
+    document.getElementById('corePosts').addEventListener('click', () => {
+      hideTile('tech')
+    })
+
+    document.getElementById('allPosts').addEventListener('click', () => {
+      showTile('tile')
+    })
+
+    // window.onload = toggleDarkMode
   </script>
 </html>
