@@ -17,16 +17,6 @@
     />
   </head>
 
-  <script>
-    function toggleDarkMode() {
-      document.querySelectorAll('.darkToggle').forEach((node) => {
-        node.classList.toggle('darkmode')
-      })
-    }
-
-    window.onload = toggleDarkMode
-  </script>
-
   <body class="darkToggle">
     <header class="borderBottom">
       <div style="position: absolute; right: 25px">
@@ -63,9 +53,19 @@
       </div>
     </header>
 
+    <div class="tileSelector borderBottom flexCentre darkToggle">
+      <button id="allPosts" class="selectorButton darkToggle">All Posts</button>
+      <button id="techPosts" class="selectorButton darkToggle">
+        Tech Posts
+      </button>
+      <button id="corePosts" class="selectorButton darkToggle">
+        Core Posts
+      </button>
+    </div>
+
     <main class="greyBackground darkToggle">
       <section class="tileLayout darkToggle">
-        <a href="blog/javascript-dom.html" class="tile darkToggle">
+        <a href="blog/javascript-dom.html" class="tile darkToggle tech">
           <div>
             <img
               src="images/pexels-matiasluge-11529239-plane-640.jpg"
@@ -77,7 +77,7 @@
           </div>
         </a>
 
-        <a href="pages/cafe.html" class="tile darkToggle">
+        <a href="pages/cafe.html" class="tile darkToggle tech">
           <img
             src="images/pexels-pixabay-414630-coffee-640px.jpg"
             alt="coffee-and-laptop"
@@ -90,7 +90,7 @@
           </p>
         </a>
 
-        <a href="blog/emotional-intelligence.html" class="tile darkToggle">
+        <a href="blog/emotional-intelligence.html" class="tile darkToggle core">
           <img
             src="images/1_jE5O4_0Ibf63j1jMsLGn2g.webp"
             alt="emotional-intelligence-artwork"
@@ -100,7 +100,7 @@
           <p>What is EQ and why is it important?</p>
         </a>
 
-        <a href="blog/html-css.html" class="tile darkToggle">
+        <a href="blog/html-css.html" class="tile darkToggle tech">
           <img
             src="images/css-position-diagram.jpg"
             alt="css-position-diagram"
@@ -146,4 +146,29 @@
       </nav>
     </footer>
   </body>
+  <script>
+    function toggleDarkMode() {
+      document.querySelectorAll('.darkToggle').forEach((node) => {
+        node.classList.toggle('darkmode')
+      })
+    }
+
+    function showHide(tileType) {
+      document.querySelectorAll('.' + tileType).forEach((node) => {
+        node.classList.toggle('hidden')
+      })
+    }
+
+    // Each button should untoggle the others... Tech button should untoggle core button and vice versa.
+
+    document.getElementById('techPosts').addEventListener('click', () => {
+      showHide('core')
+    })
+
+    document.getElementById('corePosts').addEventListener('click', () => {
+      showHide('tech')
+    })
+
+    window.onload = toggleDarkMode
+  </script>
 </html>

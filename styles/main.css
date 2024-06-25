@@ -134,6 +134,11 @@ h1 {
   /* width: 40vw; */
 }
 
+.flexCentre {
+  display: flex;
+  justify-content: center;
+}
+
 #footerNav {
   display: flex;
   justify-content: flex-start;
@@ -159,6 +164,20 @@ h1 {
 
 #logoText {
   font-family: 'Orbitron' !important;
+}
+
+.tileSelector {
+  /* display: flex; */
+  background-color: var(--bgGrey);
+}
+
+.selectorButton {
+  font-family: 'Orbitron';
+  background-color: var(--bgWhite);
+  margin: 20px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid var(--grey2);
+  border-radius: 5px;
 }
 
 #darkToggle {
@@ -193,6 +212,10 @@ h1 {
 
 .tag {
   color: orange;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
