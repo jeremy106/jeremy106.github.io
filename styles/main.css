@@ -33,14 +33,13 @@ body {
 }
 
 .banner {
-  position: absolute;
-  width: 100%;
   text-align: center;
-  bottom: 50vh;
-  left: 50%;
-  translate: -50%;
+  padding-top: 20vh;
+}
 
-  --position: 0%;
+.banner h1 {
+  margin: 0;
+  
   animation: 10s shine infinite;
 
   background: linear-gradient(
@@ -49,7 +48,7 @@ body {
     black,
     rgb(255, 165, 0) var(--position),
     rgb(255, 206, 116) var(--position2),
-    rgb(255, 165, 0) var(--position3),
+    rgb(241, 132, 30) var(--position3),
     black,
     black
   );
