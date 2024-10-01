@@ -23,6 +23,7 @@ body {
 .banner {
   text-align: center;
   padding-top: 20vh;
+  min-width: 320px;
 }
 
 .banner h1 {
@@ -33,11 +34,9 @@ body {
   background: linear-gradient(
     110deg,
     black,
-    black,
     rgb(255, 165, 0) var(--position),
     rgb(255, 206, 116) calc(var(--position) + 3%),
     rgb(241, 132, 30) calc(var(--position) + 6%),
-    black,
     black
   );
   background-clip: text;
