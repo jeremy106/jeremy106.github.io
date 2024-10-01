@@ -20,18 +20,6 @@ body {
   inherits: false;
 }
 
-@property --position2 {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: false;
-}
-
-@property --position3 {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: false;
-}
-
 .banner {
   text-align: center;
   padding-top: 20vh;
@@ -40,20 +28,20 @@ body {
 .banner h1 {
   margin: 0;
   
-  animation: 10s shine infinite;
+  animation: 9s shine infinite;
 
   background: linear-gradient(
-    106deg,
+    110deg,
     black,
     black,
     rgb(255, 165, 0) var(--position),
-    rgb(255, 206, 116) var(--position2),
-    rgb(241, 132, 30) var(--position3),
+    rgb(255, 206, 116) calc(var(--position) + 3%),
+    rgb(241, 132, 30) calc(var(--position) + 6%),
     black,
     black
   );
   background-clip: text;
-  font-size: 87;
+  font-size: clamp( 3em, 7vw , 106px);
   font-family: 'Orbitron';
   color: transparent;
 
@@ -64,17 +52,11 @@ body {
 @keyframes shine {
   0% {
     --position: 0%;
-    --position2: 3%;
-    --position3: 6%;
   }
-  50% {
-    --position: 94%;
-    --position2: 97%;
-    --position3: 100%;
+  30% {
+    --position: 100%;
   }
   100% {
     --position: 0%;
-    --position2: 3%;
-    --position3: 6%;
   }
 }
