@@ -17,7 +17,24 @@ html {
   font-family: 'Quicksand', sans-serif;
 }
 
-/* Hero Banner */
+.light-container {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    var(--color-2) 68%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-container {
+  background-color:  var(--color-1);
+  color: var(--text-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .banner-container {
   /* width: 100vw; */
@@ -27,8 +44,9 @@ html {
     circle,
     rgba(255, 255, 255, 1) 0%,
     var(--color-2) 68%
-  );
+    );
 }
+    /* Hero Banner */
 
 .banner {
   min-width: 320px;
@@ -75,7 +93,8 @@ html {
 
 /* Nav Bar */
 nav {
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100vw;
   height: 50px;
   background-color: var(--color-1);
@@ -164,17 +183,23 @@ nav svg {
   }
 }
 
+
+/* About */
+#about {
+  min-height: 50vh;
+  font-size: xx-large;
+}
+
+/* Projects */
+#projects {
+  min-height: 50vh;
+  font-size: xx-large;
+}
+
 /* Contact */
 
 #contact {
-  min-height: 80vh ;
-}
-
-.dark-container {
-  background-color: var(--color-1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh ;
 }
 
 form {
