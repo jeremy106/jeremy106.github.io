@@ -86,6 +86,7 @@ header {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100svh;
   min-width: var(--min-width);
   text-align: center;
   justify-content: space-between;
@@ -175,6 +176,7 @@ nav svg {
 
 #contact {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 form {
