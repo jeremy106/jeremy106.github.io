@@ -122,7 +122,6 @@ header svg {
 nav {
   position: sticky;
   top: 0;
-  width: 100vw;
   min-width: 320px;
   height: 50px;
   display: flex;
