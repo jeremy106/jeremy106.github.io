@@ -10,14 +10,12 @@
   </head>
 
   <body>
-    <header id="home" class="banner-container">
-      <div class="banner">
+    <header id="home" class="light-container">
         <h1>jeremy106</h1>
-        <p>Portfolio coming soon...</p>
-      </div>
+        <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5f6368"><path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z"/></svg></a>
     </header>
 
-    <nav>
+    <nav class="dark-container">
       <input type="checkbox" id="sidebar-active" />
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -47,27 +45,29 @@
             />
           </svg>
         </label>
-        <a class="home-link" href="index.html">
+        <a class="home-link" href="#home">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1rem" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
           Home
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg> -->
         </a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <!-- <a href="#">Pricing</a> -->
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <section id="about" class="dark-container">
-      About coming soon...
+    <div class="hline"></div>
+
+    <section id="about" class="dark-container coming-soon">
+      <h1>About</h1>
+      <p>coming soon...</p>
     </section>
 
-    <section id="projects" class="light-container">
-      Projects coming soon...
+    <section id="projects" class="light-container coming-soon">
+      <h1>Projects</h1>
+      <p>coming soon...</p>
     </section>
 
-
-    <section id="contact" class="dark-container">
+    <section id="contact" class="dark-container coming-soon">
       <form action="https://api.web3forms.com/submit" method="POST">
         <input
           type="hidden"
@@ -75,7 +75,10 @@
           value="dfe4be41-eeef-40e9-9f0a-a4feed02f33f"
         />
         <h1 class="title">Contact</h1>
-        <p class="subtitle">Want to work together? Ask me anything!</p>
+        <p class="subtitle">
+          <span class="line">Want to work together? </span>
+          <span class="line">Ask me anything!</span>
+        </p>
 
         <div class="form-input">
           <input type="text" name="name" placeholder="Name" required />
