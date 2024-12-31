@@ -39,6 +39,12 @@ p {
   padding: 1rem;
 }
 
+a {
+  /* text-decoration: none; */
+  all: unset;
+  cursor: pointer;
+}
+
 button {
   margin: 0.5rem;
   padding: 0.5rem 2rem;
@@ -48,6 +54,7 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .light-background {
@@ -174,15 +181,14 @@ nav svg {
   );
 }
 
-
 /* Content */
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15vh;
-  min-height: 85vh;
-  min-height: 85svh;
+  padding-top: 10vh;
+  min-height: 90vh;
+  min-height: 90svh;
 }
 
 .coming-soon h2 {
@@ -190,10 +196,44 @@ section {
 }
 
 /* About */
-.about__card-container {
+.about__blurb {
+  max-width: 700px;
+  /* text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.about__card-container {
+  width: calc(100vw - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about__card {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 5px;
+
+  display: flex;
+
+  color: var(--color-light);
+  background-color: var(--background-light);
+
+}
+
+.about__card-logo-container {
+  width: clamp(50px, 35vw, 320px);
+  height: clamp(50px, 35vw, 320px);
+  
+  background: red;
+}
+
+.about__card-content {
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 /* Contact */
