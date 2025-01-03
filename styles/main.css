@@ -354,10 +354,10 @@ textarea {
   }
 }
 
-@media (min-width: 450px){
+@media (min-width: 600px){
   
   .hero-banner h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   
   .about__card-container {
@@ -391,7 +391,13 @@ textarea {
 }
 
 @media (min-width: 1080px) {
+  
+  .hero-banner h1 {
+    font-size: 6rem;
+  }
+
   html {
     font-size: 1.15rem;
   }
+
 }
