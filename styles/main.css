@@ -76,6 +76,14 @@ button {
   );
 }
 
+.in-text-icon {
+  height: 1rem;
+  width: auto;
+  position: relative;
+  bottom: -0.15rem;
+  padding-left: 0.15rem;
+}
+
 /* Hero Banner */
 .hero-banner {
   height: 100vh;
@@ -256,6 +264,54 @@ section {
   object-fit: contain;
 }
 
+/* Projects */
+
+.project__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project__container h3 {
+  text-align: center;
+}
+
+.project__container p {
+  padding: 0.5rem;
+}
+
+.project__image-stack {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+.project__image-stack img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 30%));
+}
+
+.image-stack__item-top {
+  grid-column: 5 / span 8;
+  grid-row: 1;
+  padding-top: 15%;
+  z-index: 2;
+}
+
+.image-stack__item-bottom {
+  grid-column: 1 / -3;
+  grid-row: 1;
+}
+
+.image-stack__item-middle {
+  grid-column: 2 / -3;
+  padding-top: 48%;
+  grid-row: 1;
+  z-index: 3;
+}
+
 /* Contact */
 #contact p,
 form {
@@ -386,6 +442,21 @@ textarea {
   .about__card-logo {
     max-width: clamp(65px, 110px, 50%);
     justify-self: center 
+  }
+
+  .project__container {
+    max-width: 1280px;
+    flex-direction: row;
+    margin: 2rem;
+  }
+
+  .project__blurb {
+    max-width: 700px;
+    padding: 2rem 1rem;
+  }
+  .project__images {
+    flex-grow: 1 1 auto;
+    max-width: 700px;
   }
 
 }
